@@ -1,0 +1,4 @@
+<h1> New Post
+<form method="POST" action=@{PostNewR} enctype="#{entryFormEnctype}">
+    ^{entryFormWidget}
+    <input type="submit" value="Submit" .btn .btn-default>

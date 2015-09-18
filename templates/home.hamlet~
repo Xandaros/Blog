@@ -1,0 +1,4 @@
+<h1> Blog
+<ul>
+    $forall Entity _ entry <- entries
+        <li> #{entryTitle entry}

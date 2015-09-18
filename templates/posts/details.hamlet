@@ -1,0 +1,2 @@
+<h1> #{entryTitle post}
+<div .well> #{entryContent post}

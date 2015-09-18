@@ -1,0 +1,6 @@
+module Handler.Post where
+
+import Import
+
+getPostR :: EntryId -> Handler Html
+getPostR entryId = error "Not yet implemented: getPostR"

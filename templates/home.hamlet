@@ -1,0 +1,7 @@
+<h1> Blog
+<ul>
+    $forall Entity id entry <- entries
+        <li>
+            <a href=@{PostR id}> #{entryTitle entry}
+<a href=@{PostNewR}>
+    <div .btn .btn-default> New Post

@@ -1,0 +1,11 @@
+User
+    username Text
+    password Text Maybe
+    UniqueUser username
+    deriving Typeable
+
+Entry
+    title Text
+    content Textarea
+    date UTCTime Maybe default=CURRENT_TIMESTAMP
+ -- By default this file is used in Model.hs (which is imported by Foundation.hs)

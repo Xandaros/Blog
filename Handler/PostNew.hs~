@@ -1,0 +1,21 @@
+{-# LANGUAGE OverloadedStrings #-}
+module Handler.PostNew where
+
+import Yesod.Form.Bootstrap3
+
+import Import
+
+getPostNewR :: Handler Html
+getPostNewR = do
+  ((res, entryFormWidget), entryFormEnctype) <- runFormPost entryForm
+  defaultLayout $ do
+    setTitle "New Post"
+    $(widgetFile "posts/new")
+
+postPostNewR :: Handler Html
+postPostNewR = error "Not yet implemented: postPostNewR"
+
+entryForm :: Form Entry
+entryForm = renderDivs $ Entry <$> areq textField      (bfs ("Title"   :: Text)) Nothing
+                               <*> areq textareaField  (bfs ("Content" :: Text)) Nothing
+                               <*> pure Nothing
